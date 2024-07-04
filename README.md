@@ -45,7 +45,7 @@ luarocks install luafilesystem
 Note you will need to manually install `luafilesystem` when using LuaRocks. This is made to maintain
 backward compatibility.
 
-This library uses [an FFI-based openssl backend](https://github.com/thenam153/lua-resty-openssl),
+This library uses [an FFI-based openssl backend](https://github.com/fffonion/lua-resty-openssl),
 which currently supports OpenSSL `1.1.1`, `1.1.0` and `1.0.2` series.
 
 
@@ -859,7 +859,7 @@ See Also
 * [Automatic Certificate Management Environment (ACME)](https://tools.ietf.org/html/rfc8555)
 * [haproxytech/haproxy-lua-acme](https://github.com/haproxytech/haproxy-lua-acme) The ACME Lua implementation used in HAProxy.
 * [GUI/lua-resty-auto-ssl](https://github.com/GUI/lua-resty-auto-ssl)
-* [lua-resty-openssl](https://github.com/thenam153/lua-resty-openssl)
+* [lua-resty-openssl](https://github.com/fffonion/lua-resty-openssl)
 * [Let's Encrypt API rate limits](https://letsencrypt.org/docs/rate-limits/)
 
 [Back to TOC](#table-of-contents)
