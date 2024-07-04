@@ -139,7 +139,9 @@ _M.set_account_key = set_account_key
 function _M:init()
   local httpc = new_httpc()
 
-  local resp, err = httpc:request_uri(self.conf.api_uri)
+  local resp, err = httpc:request_uri(self.conf.api_uri, {
+    ssl_verify = false
+  })
   if err then
     return "acme directory request failed: " .. err
   end
@@ -305,7 +307,8 @@ function _M:post(url, payload, headers, nonce)
     {
       method = "POST",
       body = jws,
-      headers = headers
+      headers = headers,
+      ssl_verify = false
     }
   )
 
@@ -378,7 +381,8 @@ function _M:new_nonce()
   local httpc = new_httpc()
   local resp, err = httpc:request_uri(self.directory["newNonce"],
     {
-      method = "HEAD"
+      method = "HEAD",
+      ssl_verify = false
     }
   )
 

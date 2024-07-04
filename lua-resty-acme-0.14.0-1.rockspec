@@ -1,7 +1,7 @@
 package = "lua-resty-acme"
 version = "0.14.0-1"
 source = {
-   url = "git+https://github.com/fffonion/lua-resty-acme.git",
+   url = "git+https://github.com/thenam153/lua-resty-acme.git",
    tag = "0.14.0"
 }
 description = {
@@ -13,7 +13,7 @@ description = {
     - `resty.acme.autossl`: automatic lifecycle management of Let's Encrypt certificates
     - `resty.acme.client`: Lua implementation of ACME v2 protocol
    ]],
-   homepage = "https://github.com/fffonion/lua-resty-acme",
+   homepage = "https://github.com/thenam153/lua-resty-acme",
    license = "BSD"
 }
 build = {

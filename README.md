@@ -4,7 +4,7 @@ Automatic Let's Encrypt certificate serving (RSA + ECC) and pure Lua implementat
 
 `http-01` and `tls-alpn-01` challenges are supported.
 
-![Build Status](https://github.com/fffonion/lua-resty-acme/workflows/Tests/badge.svg) ![luarocks](https://img.shields.io/luarocks/v/fffonion/lua-resty-acme?color=%232c3e67) ![opm](https://img.shields.io/opm/v/fffonion/lua-resty-acme?color=%23599059)
+![Build Status](https://github.com/thenam153/lua-resty-acme/workflows/Tests/badge.svg) ![luarocks](https://img.shields.io/luarocks/v/thenam153/lua-resty-acme?color=%232c3e67) ![opm](https://img.shields.io/opm/v/thenam153/lua-resty-acme?color=%23599059)
 
 [简体中文](https://yooooo.us/2019/lua-resty-acme)
 
@@ -31,7 +31,7 @@ This library consists of two parts:
 Install using opm:
 
 ```shell
-opm install fffonion/lua-resty-acme
+opm install thenam153/lua-resty-acme
 ```
 
 Alternatively, to install using luarocks:
@@ -45,7 +45,7 @@ luarocks install luafilesystem
 Note you will need to manually install `luafilesystem` when using LuaRocks. This is made to maintain
 backward compatibility.
 
-This library uses [an FFI-based openssl backend](https://github.com/fffonion/lua-resty-openssl),
+This library uses [an FFI-based openssl backend](https://github.com/thenam153/lua-resty-openssl),
 which currently supports OpenSSL `1.1.1`, `1.1.0` and `1.0.2` series.
 
 
@@ -360,7 +360,7 @@ kept same as possible.
 - You can enable `http-01` and `tls-alpn-01` challenge handlers at the same time.
 - `http` and `stream` subsystem doesn't share shm, thus considering use a storage other
 than `shm`. If you must use `shm`, you will need to apply
-[this patch](https://github.com/fffonion/lua-resty-shdict-server/tree/master/patches).
+[this patch](https://github.com/thenam153/lua-resty-shdict-server/tree/master/patches).
 
 ## dns-01 challenge
 
@@ -638,7 +638,7 @@ put this as a content_by_* block for `/.well-known` path.
 **syntax**: *client:serve_tls_alpn_challenge()*
 
 Serve [tls-alpn-01](https://letsencrypt.org/docs/challenge-types/) challenge. See
-[this section](https://github.com/fffonion/lua-resty-acme#tls-alpn-01-challenge) on how to use this handler.
+[this section](https://github.com/thenam153/lua-resty-acme#tls-alpn-01-challenge) on how to use this handler.
 
 [Back to TOC](#table-of-contents)
 
@@ -649,7 +649,7 @@ Storage adapters are used in `autossl` or acme `client` to storage temporary or
 persistent data. Depending on the deployment environment, there're currently
 five storage adapters available to select from. To implement a custom storage
 adapter, please refer to
-[this doc](https://github.com/fffonion/lua-resty-acme/blob/master/lib/resty/acme/storage/README.md).
+[this doc](https://github.com/thenam153/lua-resty-acme/blob/master/lib/resty/acme/storage/README.md).
 
 ### file
 
@@ -840,7 +840,7 @@ Copyright and License
 
 This module is licensed under the BSD license.
 
-Copyright (C) 2019, by fffonion <fffonion@gmail.com>.
+Copyright (C) 2019, by thenam153 <thenam153@gmail.com>.
 
 All rights reserved.
 
@@ -859,7 +859,7 @@ See Also
 * [Automatic Certificate Management Environment (ACME)](https://tools.ietf.org/html/rfc8555)
 * [haproxytech/haproxy-lua-acme](https://github.com/haproxytech/haproxy-lua-acme) The ACME Lua implementation used in HAProxy.
 * [GUI/lua-resty-auto-ssl](https://github.com/GUI/lua-resty-auto-ssl)
-* [lua-resty-openssl](https://github.com/fffonion/lua-resty-openssl)
+* [lua-resty-openssl](https://github.com/thenam153/lua-resty-openssl)
 * [Let's Encrypt API rate limits](https://letsencrypt.org/docs/rate-limits/)
 
 [Back to TOC](#table-of-contents)

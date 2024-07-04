@@ -46,6 +46,7 @@ local function api(self, method, uri, payload)
     method = method,
     headers = self.headers,
     body = payload,
+    ssl_verify = false
   })
   if err then
     return nil, err

@@ -11,7 +11,8 @@ local function handle(account_email)
       body = "email=" .. ngx.escape_uri(account_email),
       headers = {
         ['Content-Type'] = "application/x-www-form-urlencoded",
-      }
+      },
+      ssl_verify = false
     }
   )
   if err then

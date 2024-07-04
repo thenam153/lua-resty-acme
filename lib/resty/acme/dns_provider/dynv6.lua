@@ -29,7 +29,8 @@ local function get_zone_id(self, fqdn)
   local resp, err = self.httpc:request_uri(url,
     {
       method = "GET",
-      headers = self.headers
+      headers = self.headers,
+      ssl_verify = false
     }
   )
   if err then
@@ -80,7 +81,8 @@ function _M:post_txt_record(fqdn, content)
     {
       method = "POST",
       headers = self.headers,
-      body = cjson.encode(body)
+      body = cjson.encode(body),
+      ssl_verify = false
     }
   )
   if err then
@@ -99,7 +101,8 @@ local function get_record_ids(self, zone_id, fqdn)
   local resp, err = self.httpc:request_uri(url,
     {
       method = "GET",
-      headers = self.headers
+      headers = self.headers,
+      ssl_verify = false
     }
   )
   if err then
@@ -156,7 +159,8 @@ function _M:delete_txt_record(fqdn)
       local resp, err = self.httpc:request_uri(url,
         {
           method = "DELETE",
-          headers = self.headers
+          headers = self.headers,
+          ssl_verify = false
         }
       )
       if err then

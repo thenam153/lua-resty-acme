@@ -36,7 +36,8 @@ local function request(self, uri, body)
     {
       method = "POST",
       headers = self.headers,
-      body = cjson.encode(body)
+      body = cjson.encode(body),
+      ssl_verify = false
     }
   )
   if err then
